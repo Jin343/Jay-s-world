@@ -65,7 +65,7 @@ header .container .logo {
 }
 
 header .container>ul {
-    width: calc(110px * 4);
+    width: 60%;
     text-transform: capitalize;
     padding: 0;
     font-size: 15px;
@@ -75,7 +75,9 @@ header .container>ul {
     justify-content: space-between;
     align-items: center;
 }
-
+header .container>ul li{
+    flex-grow: 1;
+}
 header .otherLinks {
     margin: 0;
     padding: 30px;
@@ -214,7 +216,7 @@ header .container>ul>li >a {
     header .container>ul>li> a{
         width: 80px;
         height: 50px;
-        font-size: 13px;
+        font-size: 14px;
     }
 }
 
@@ -240,7 +242,6 @@ header .container>ul>li >a::after {
 header .container>ul>li:hover >a::after {
     width: 100%;
 }
-
 @media (max-width:1100px) {
     header .container {
         width: 75%
@@ -372,7 +373,7 @@ header .container>ul>li:hover >a::after {
     font-weight: bold;
     font-size: 35px;
     color: #3b3b3b;
-    letter-spacing: -2px;
+    letter-spacing: -1px;
     font-weight: 600;
 }
 
@@ -564,7 +565,7 @@ header .container>ul>li:hover >a::after {
     color: var(--blue);
     padding: 10px 30px 20px;
     width: 100%;
-    font-size: 13px;
+    font-size: 14px;
     margin: 0px auto;
     justify-content: space-between;
     align-items: center;
@@ -604,7 +605,7 @@ header .container>ul>li:hover >a::after {
         font-size: 15px;
     }
     .common-container .elements .el>.text>p{
-        font-size: 12px;
+        font-size: 14px;
         line-height: 1.4;
     }
     .common-container {
@@ -630,7 +631,7 @@ header .container>ul>li:hover >a::after {
     }
 
     .common-container .elements .el .readMore i {
-        font-size: 13px;
+        font-size: 14px;
     }
 }
 
@@ -975,11 +976,10 @@ header .container>ul>li:hover >a::after {
     overflow: hidden;
 }
 
-@media (min-width:1200px) {
     .testimonials .common-container {
         width: 90% !important;
     }
-}
+
 
 .testimonials .content {
     padding: 60px 0;
@@ -1049,7 +1049,7 @@ cursor: pointer;
         font-size: 12px;
     }
     .testimonials .content .el p{
-        font-size: 12px;
+        font-size: 13px;
         line-height: 1.5;
     }
     .testimonials .content .el h3{
@@ -1059,9 +1059,6 @@ cursor: pointer;
         width: 85px;
         height: 85px;
     }
-    .testimonials .common-container {
-        width: 83% !important;
-    }
 }
 
 @media (max-width:767px) {
@@ -1069,10 +1066,10 @@ cursor: pointer;
         height: 210px;
     }
     .testimonials .content .el i{
-        font-size: 13px;
+        font-size: 14px;
     }
     .testimonials .content .el p{
-        font-size: 13px;
+        font-size: 14px;
         line-height: 1.7;
     }
     .testimonials .content .el h3{
@@ -1224,7 +1221,7 @@ cursor: pointer;
         font-size: 15px;
     }
     .team .el .text{
-        padding-left: 65px;
+        padding-left: 60px;
         font-size: 15px;
     }
 }
@@ -1273,7 +1270,7 @@ cursor: pointer;
 }
 @media (max-width:1039px) {
     .services .content {
-        grid-gap:7px 15px;
+        grid-gap:20px 15px;
     }
 }
 @media (max-width:767px) {
@@ -1612,7 +1609,7 @@ cursor: pointer;
 }
 
 .event .time .unit span {
-    font-size: 13px;
+    font-size: 14px;
 }
 
 .event .text h3 {
@@ -1629,14 +1626,14 @@ cursor: pointer;
 }
 @media (max-width:1039px){
     .event .text p {
-        font-size: 13px;
+        font-size: 14px;
         line-height: 1.4;
     }
     .event .text h3 {
         font-size: 20px;
     }
     .event .time .unit span {
-        font-size: 12px;
+        font-size: 14px;
     }
     .event .time .unit div {
         font-size: 35px;
@@ -1684,7 +1681,7 @@ cursor: pointer;
 
 @media (max-width:767px){
     .event .subscribe form button {
-        font-size: 13px;
+        font-size: 14px;
     padding: 15px 10px;
         height: 55px;
     }
@@ -1862,7 +1859,7 @@ width: 100%;
     }
     .pricing .content .subscribe button {
         padding: 10px;
-        font-size: 13px;
+        font-size: 14px;
     }
     .pricing .content .list .el i {
         font-size: 15px;
@@ -2079,7 +2076,10 @@ align-items: center;
 }
 
 
-@media (max-width:1039px) {
+    @media (max-width:1039px) {
+    .videos .common-container {
+        width: 93% !important;
+    }
     .videos .content .list .header {
         font-size: 14px;
     }
@@ -2192,7 +2192,7 @@ align-items: center;
 .discount .common-container .text textarea,
 .discount .common-container .text button {
     width: 90%;
-    font-size: 13px;
+    font-size: 14px;
     margin: 0 auto;
     margin-bottom: 20px;
     border: none;
@@ -2217,23 +2217,24 @@ align-items: center;
 @media (max-width:1039px) {
     .discount .common-container .text input, .discount .common-container .text textarea, .discount .common-container .text button{
         padding: 15px;
+        font-size: 13px;
     }
     .discount .common-container .text button{
         font-size: 14px;
         border-radius: 3px;
     }
     .discount .common-container .pic h3, .discount .common-container .text h3{
-        font-size: 30px;
+        font-size: 25px;
     }
     .discount .common-container .pic img{
-        height: 240px;
+        height: 240px;}
          .pricing .container{
         margin: 0 auto;
         width: 80% !important;
     }
     .discount .common-container .pic p{
         margin-bottom: 20px;
-        font-size: 13px;
+        font-size: 14px;
         line-height: 1.3;
         color: #e8e8e8;
     }}
@@ -2260,7 +2261,7 @@ footer .common-container {
     }
 }
 
-@media (max-width:1039px) {
+@media (max-width:767px) {
     .discount .common-container {
         grid-template-columns: 1fr;
         width: 100% !important;
@@ -2443,7 +2444,7 @@ footer p {
         font-size: 14px;
     }
     footer p {
-        font-size: 13px;
+        font-size: 14px;
     }
     footer .common-container .sec3 i {
         font-size: 17px;
@@ -2463,7 +2464,7 @@ footer p {
         max-height: 80px;
     }
     footer .common-container .sec1 p {
-        font-size: 13px;
+        font-size: 14px;
     }
 }
 @media (max-width:767px) {

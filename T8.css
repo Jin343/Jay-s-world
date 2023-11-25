@@ -136,10 +136,12 @@ header .otherLinks .links li {
     padding:10px;
     cursor: pointer;
     display: flex;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
 }
-
+header .otherLinks .links li a{
+    margin: 0 auto;
+}
 header .otherLinks li:not(:last-child) {
     border-bottom: 1px solid rgba(161, 161, 161, 0.3);
 }
@@ -201,25 +203,6 @@ header .container>ul>li >a {
     transition: background-color 0.5s;
 }
 
-@media (max-width:1039px) {
-    header .container>ul> li >a {
-        font-size: 14px;
-    }
-}
-
-@media (max-width:767px) {
-    header .container .logo {
-        height: 60px;
-        padding: 20px 0 20px;
-    }
-
-    header .container>ul>li> a{
-        width: 80px;
-        height: 50px;
-        font-size: 14px;
-    }
-}
-
 header .container>ul >li:hover> a {
     color: var(--blue);
 }
@@ -252,18 +235,26 @@ header .container>ul>li:hover >a::after {
     header .container {
         width: 85%
     }
+    header .container>ul> li >a {
+        font-size: 14px;
+    }
 }
-
 @media (max-width:767px) {
     header .container {
         flex-direction: column;
-        width: 100%;
-    }
-
-    header .container .logo {
+            width: 80%;
+        }
+        header .container .logo {
+            height: 60px;
+            padding: 20px 0 20px;
         font-size: 25px;
     }
 
+    
+        header .container>ul>li> a{
+            height: 55px;
+            font-size: 12px;
+        }
     header .container>ul {
         width: 100%;
         justify-content: center;
@@ -341,7 +332,8 @@ header .container>ul>li:hover >a::after {
         display: none;
     }
     .landing::after {
-        top:-18px
+    height: 110%;
+        top:-28px
     }
     .landing .container {
     height: 400px;
@@ -636,6 +628,9 @@ header .container>ul>li:hover >a::after {
 }
 
 @media (max-width:767px) {
+    .common-container .elements .el>.text>p{
+        font-size: 13px;
+    }
     .common-container .elements {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
@@ -1250,11 +1245,6 @@ cursor: pointer;
     }
 }
 
-@media (min-width:1200px) {
-    .services .common-container {
-        width: 70% !important;
-    }
-}
 
 .services .content {
     display: grid;
@@ -1276,6 +1266,13 @@ cursor: pointer;
 @media (max-width:767px) {
     .services .content {
         grid-template-columns: repeat(1, 1fr);
+    } .services .common-container {
+        width: 70% !important;
+    }
+}
+@media (min-width:1200px)  {
+    .services .common-container {
+        width: 70% !important;
     }
 }
 .services .el {

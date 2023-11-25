@@ -17,9 +17,6 @@ html {
 * {
     box-sizing: border-box;
 }
-body>div{
-    /* overflow: hidden; */
-}
 body>div:not(.spikes):not(.stats):not(.discount) {
     padding: 60px 0;
 }
@@ -37,7 +34,6 @@ p {
 }
 
 header {
-    overflow: hidden;
     z-index: 9999;
     position: sticky;
     background-color: white;
@@ -79,6 +75,7 @@ header .container>ul li{
     flex-grow: 1;
 }
 header .otherLinks {
+    width: 100%;
     margin: 0;
     padding: 30px;
     position: absolute;
@@ -113,16 +110,6 @@ header .otherLinks::before {
 header .otherLinks img {
     max-width: 450px;
 }
-@media (max-width:1039px){
-    header .otherLinks img {
-        max-width: 350px;
-    }
-}
-@media (max-width:767px){
-    header .otherLinks img {
-        display: none;
-    }
-}
 
 header .otherLinks .links {
     padding: 0;
@@ -145,7 +132,34 @@ header .otherLinks .links li a{
 header .otherLinks li:not(:last-child) {
     border-bottom: 1px solid rgba(161, 161, 161, 0.3);
 }
+@media (max-width:1039px){
+    header .otherLinks{
+        gap:10px
+    }
+    header .otherLinks .links {
+    min-width: 150px;
+    margin: 0;
+    gap:10px;
+    }
+    header .otherLinks .links li{
+        font-size: 13px;
+        padding: 5px 0 5px 10px;
+    }
+    header .otherLinks img {
+        max-width: 300px;
+    }
+}
+@media (max-width:800px){
+    header .otherLinks img {
+        max-width: 280px;
+    }
+    header .otherLinks .links {
+        min-width: 160px;}
+}
 @media (max-width:767px){
+    header .otherLinks img {
+        display: none;
+    }
     header .otherLinks {
         flex-direction: column;
         padding: 0;
@@ -299,7 +313,7 @@ header .container>ul>li:hover >a::after {
     background-image: url("https://elzerowebschool.github.io/HTML_And_CSS_Template_Three/imgs/landing-image.png");
     background-size: cover;
     background-repeat: no-repeat;
-    animation: upAndDown 5s linear infinite;
+    animation: upAndDown 15s linear infinite;
 }
 
 @media (max-width:1300px) {
@@ -971,7 +985,7 @@ header .container>ul>li:hover >a::after {
     overflow: hidden;
 }
 
-    .testimonials .common-container {
+.testimonials .common-container {
         width: 90% !important;
     }
 
@@ -1057,6 +1071,9 @@ cursor: pointer;
 }
 
 @media (max-width:767px) {
+    .testimonials .container{
+        width: 85% !important;
+    }
     .testimonials .content .el {
         height: 210px;
     }
@@ -2366,6 +2383,7 @@ footer .common-container .sec3 {
 footer .common-container .sec3 div {
     color: rgba(255, 255, 255, 0.7);
     font-size: 14px;
+    text-decoration: none;
     line-height: 1.8;
     display: flex;
     align-items: center;
